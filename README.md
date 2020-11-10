@@ -1,4 +1,4 @@
-## BSC_methods_standardized
+## BSC pipeline
  
 1. Copy-paste setup_folders (from /data/chamal/projects/paroli/BSC_validation/BSC) in the desired directory and run it
 2. Copy-paste 'run' in main folder
