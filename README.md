@@ -1,8 +1,8 @@
 ## BSC_methods_standardized
  
-1. Copy-paste setup_folders in the desired directory and run it
+1. Copy-paste setup_folders (from /data/chamal/projects/paroli/BSC_validation/BSC) in the desired directory and run it
 2. Copy-paste 'run' in main folder
-3. populate /methods with /data/chamal/projects/paroli/BSC_validation/methods
+3. populate /methods with everything in /data/chamal/projects/paroli/BSC_validation/BSC
 4. populate /scans with preprocessed t1s (from /final in CIVET output)
 5. rename t1s so they fit the format : ID_t1.mnc
 6. populate surfaces/WM_0_surfaces with white_surfaces from CIVET output
