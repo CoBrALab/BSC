@@ -10,7 +10,7 @@ module load CIVET/1.1.12
 
 if [ $1 == '0' ]
 then
-        echo nope
+        echo WM_0 base surface
         cd ./surfaces
         for file in WM_0_surfaces/*left*
         do
@@ -23,7 +23,7 @@ then
 
 elif [ $1 == '12_5' ]
 then
-        echo yay
+        echo GM_12_5 base surface
         cd ./surfaces
         for file in GM_12_5_surfaces/*left*
         do
