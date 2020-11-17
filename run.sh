@@ -1,31 +1,31 @@
 #!/bin/bash
 
 # Generate new gray matter surfaces
-./methods/generate_gray_surfaces 0 50 25
-./methods/generate_gray_surfaces 0 25 12_5
-./methods/generate_gray_surfaces 0 12_5 6_25
-./methods/generate_gray_surfaces 12_5 25 18_75
+./methods/generate_gray_surfaces.sh 0 50 25
+./methods/generate_gray_surfaces.sh 0 25 12_5
+./methods/generate_gray_surfaces.sh 0 12_5 6_25
+./methods/generate_gray_surfaces.sh 12_5 25 18_75
 
 # Generate new white matter surfaces
-./methods/generate_white_surfaces
+./methods/generate_white_surfaces.sh
 
 # Sample surfaces
 module unload minc-toolkit
 module load CIVET/1.1.12 qbatch
-./methods/sample_surfaces GM_50
-./methods/sample_surfaces GM_25
-./methods/sample_surfaces GM_18_75
-./methods/sample_surfaces GM_12_5
-./methods/sample_surfaces GM_6_25
-./methods/sample_surfaces WM_0
-./methods/sample_surfaces WM_6_25
-./methods/sample_surfaces WM_12_5
-./methods/sample_surfaces WM_18_75
-./methods/sample_surfaces WM_25
+./methods/sample_surfaces.sh GM_50
+./methods/sample_surfaces.sh GM_25
+./methods/sample_surfaces.sh GM_18_75
+./methods/sample_surfaces.sh GM_12_5
+./methods/sample_surfaces.sh GM_6_25
+./methods/sample_surfaces.sh WM_0
+./methods/sample_surfaces.sh WM_6_25
+./methods/sample_surfaces.sh WM_12_5
+./methods/sample_surfaces.sh WM_18_75
+./methods/sample_surfaces.sh WM_25
 qbatch -N BSC_sample ./methods/joblist_sample
 
 # Fit unsmoothed sigmoid curve
-./methods/run_sigmoid_unsmoothed
+./methods/run_sigmoid_unsmoothed.sh
 cd ./methods
 module unload CIVET
 module load R/3.4.0
@@ -46,6 +46,6 @@ qbatch -N BSC_smoothed ./methods/joblist_smoothed
 
 
 # Resample
-./methods/resample
+./methods/resample.sh
 
 # Regress out mean curvature
