@@ -39,7 +39,7 @@ qbatch -N BSC_unsmoothed joblist_unsmoothed
 cd ..
 
 # Smooth curves
-./methods/smooth_sigmoid
+./methods/smooth_sigmoid.sh
 module unload minc-toolkit
 module load CIVET/1.1.12 qbatch
 qbatch -N BSC_smoothed ./methods/joblist_smoothed
