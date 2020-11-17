@@ -25,10 +25,10 @@ then
         cd ./surfaces
         for file in GM_12_5_surfaces/*left*
         do
-                average_surfaces GM_"$new_fraction"_surfaces/$(basename $file _GM_12_5_surface_left.obj)_GM_"$new_fraction"_surface_left.obj none none 1 $file GM_"$old_fraction"_surfaces/$(basename $file _WM_0_surface_left.obj)_GM_"$old_fraction"_surface_left.obj	
+                average_surfaces GM_"$new_fraction"_surfaces/$(basename $file _GM_12_5_surface_left.obj)_GM_"$new_fraction"_surface_left.obj none none 1 $file GM_"$old_fraction"_surfaces/$(basename $file _GM_12_5_surface_left.obj)_GM_"$old_fraction"_surface_left.obj	
         done
         for file in GM_12_5_surfaces/*right*
         do
-                average_surfaces GM_"$new_fraction"_surfaces/$(basename $file _GM_12_5_surface_right.obj)_GM_"$new_fraction"_surface_right.obj none none 1 $file GM_"$old_fraction"_surfaces/$(basename $file _WM_0_surface_right.obj)_GM_"$old_fraction"_surface_right.obj
+                average_surfaces GM_"$new_fraction"_surfaces/$(basename $file _GM_12_5_surface_right.obj)_GM_"$new_fraction"_surface_right.obj none none 1 $file GM_"$old_fraction"_surfaces/$(basename $file _GM_12_5_surface_right.obj)_GM_"$old_fraction"_surface_right.obj
         done
 fi
