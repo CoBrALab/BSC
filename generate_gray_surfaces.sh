@@ -8,8 +8,9 @@ new_fraction=$3  #new percentile surface fraction of cortical thickness (express
 module unload minc-toolkit
 module load CIVET/1.1.12
 
-if base_surface==0
+if [ $1 == '0' ]
 then
+        echo nope
         cd ./surfaces
         for file in WM_0_surfaces/*left*
         do
@@ -20,8 +21,9 @@ then
                 average_surfaces GM_"$new_fraction"_surfaces/$(basename $file _WM_0_surface_right.obj)_GM_"$new_fraction"_surface_right.obj none none 1 $file GM_"$old_fraction"_surfaces/$(basename $file _WM_0_surface_right.obj)_GM_"$old_fraction"_surface_right.obj
         done
 
-elif base_surface==12_5
+elif [ $1 == '12_5' ]
 then
+        echo yay
         cd ./surfaces
         for file in GM_12_5_surfaces/*left*
         do
