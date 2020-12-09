@@ -1,4 +1,19 @@
-## BSC pipeline
+## Description
+Code for our newly developped MRI biomarker, the boundary sharpness coefficient (BSC).
+
+The BSC quantifies the transition between white matter and gray matter and is highly influenced by intracortical myelin.
+The proof-of-concept paper, written by Emily Olafson and other, is currently in available in preprint here : https://www.biorxiv.org/content/10.1101/2020.07.09.196212v2
+
+## Dependencies
+- minc-tool-kit 1.9.16(http://bic-mni.github.io/#v2-version-1918)
+- CIVET 1.1.12 (https://www.bic.mni.mcgill.ca/ServicesSoftware/CIVET)
+- R 3.4.0
+- Rstudio
+- R-extras 3.4.0
+- RMINC (https://github.com/Mouse-Imaging-Centre/RMINC)
+- the R module mni.cortical.statistics (https://github.com/BIC-MNI/mni.cortical.statistics)
+
+## Procedure (specific to CIC users)
  
 1. Copy-paste setup_folders (from /data/chamal/projects/paroli/BSC_validation/BSC or from this github) in the desired directory and run it
 2. Copy-paste 'run' in main folder
