@@ -2,7 +2,7 @@
 Code for our newly developped MRI biomarker, the boundary sharpness coefficient (BSC).
 
 The BSC quantifies the transition between white matter and gray matter and is highly influenced by intracortical myelin.
-The proof-of-concept paper, written by Emily Olafson and other, is currently in available in preprint here : https://www.biorxiv.org/content/10.1101/2020.07.09.196212v2
+The proof-of-concept paper, written by Emily Olafson and others, is currently in available in preprint here : https://www.biorxiv.org/content/10.1101/2020.07.09.196212v2
 
 ## Dependencies
 - minc-tool-kit 1.9.16(http://bic-mni.github.io/#v2-version-1918)
