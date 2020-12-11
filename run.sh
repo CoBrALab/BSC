@@ -47,5 +47,3 @@ qbatch -N BSC_smoothed ./methods/joblist_smoothed
 
 # Resample
 ./methods/resample.sh
-
-# Regress out mean curvature
