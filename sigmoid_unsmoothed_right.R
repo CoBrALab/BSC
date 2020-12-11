@@ -2,9 +2,7 @@
 # Can the cortical intensity profile be approximated with a sigmoid function?
 ### Load required libraries
 ##
-library(reshape2)
 library(plyr)
-library(ggplot2)
 library(RMINC)
 library(metafor)
 library(mni.cortical.statistics) 
