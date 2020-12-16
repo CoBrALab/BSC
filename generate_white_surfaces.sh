@@ -1,8 +1,5 @@
 #!/bin/bash
 
-module unload CIVET
-module load minc-toolkit/1.9.16
-
 #cd ./surfaces/WM_0_surfaces
 for file in ./surfaces/WM_0_surfaces/*left*;
 do
