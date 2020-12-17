@@ -1,5 +1,5 @@
 ## Description
-Code for our newly developped MRI biomarker, the boundary sharpness coefficient (BSC).
+Code for our newly developed MRI biomarker, boundary sharpness coefficient (BSC).
 
 The BSC quantifies the transition between white matter and gray matter and is highly influenced by intracortical myelin.
 The proof-of-concept paper, written by Emily Olafson and others, is currently in available in preprint here : https://www.biorxiv.org/content/10.1101/2020.07.09.196212v2
@@ -12,6 +12,7 @@ The proof-of-concept paper, written by Emily Olafson and others, is currently in
 - R-extras 3.4.0
 - RMINC (https://github.com/Mouse-Imaging-Centre/RMINC)
 - the R module mni.cortical.statistics (https://github.com/BIC-MNI/mni.cortical.statistics)
+- qbatch (https://github.com/pipitone/qbatch) but any tool for executing commands in parallel can be substituted (with modifications to run.sh)
 
 ## Procedure (specific to CIC users)
  

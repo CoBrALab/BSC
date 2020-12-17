@@ -5,8 +5,6 @@ base_surface=$1
 old_fraction=$2 #fraction used alongside the white matter to calculate new surface (expressed w/o percentage sign). E.g 25, mid
 new_fraction=$3  #new percentile surface fraction of cortical thickness (expressed w/o percentage sign). E.g. 12_5 (corresponds to 25 as old_fraction), 25 (corresponds to mid as old_fraction)
 
-module unload minc-toolkit
-module load CIVET/1.1.12
 
 if [ $1 == '0' ]
 then

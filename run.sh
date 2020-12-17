@@ -10,8 +10,7 @@
 ./methods/generate_white_surfaces.sh
 
 # Sample surfaces
-module unload minc-toolkit
-module load CIVET/1.1.12 qbatch
+# unload minc-toolkit at this point if there are conflicts with CIVET and minc-toolkit.
 ./methods/sample_surfaces.sh GM_50
 ./methods/sample_surfaces.sh GM_25
 ./methods/sample_surfaces.sh GM_18_75
@@ -27,25 +26,12 @@ qbatch -N BSC_sample ./methods/joblist_sample
 # Fit unsmoothed sigmoid curve
 ./methods/run_sigmoid_unsmoothed.sh
 cd ./methods
-module unload CIVET
-module load R/3.4.0
-module load rstudio
-module load R-extras/3.4.0
-module load minc-toolkit/1.9.16
-module load RMINC/1.5.1.0^minc-toolkit-1.9.16^R-3.4.0
-module load mni.cortical.statistics
-module load qbatch
 qbatch -N BSC_unsmoothed joblist_unsmoothed
 cd ..
 
 # Smooth curves
 ./methods/smooth_sigmoid.sh
-module unload minc-toolkit
-module load CIVET/1.1.12 qbatch
 qbatch -N BSC_smoothed ./methods/joblist_smoothed
-
 
 # Resample
 ./methods/resample.sh
-
-# Regress out mean curvature

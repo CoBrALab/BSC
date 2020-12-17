@@ -1,4 +1,5 @@
 #!/bin/bash
+# This function resamples subject-level surface data to a common mesh using surfmap files from CIVET.
 
 module load CIVET/1.1.12
 module load anaconda/2.3
