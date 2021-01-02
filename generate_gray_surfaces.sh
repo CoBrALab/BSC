@@ -8,27 +8,24 @@ new_fraction=$3  #new percentile surface fraction of cortical thickness (express
 
 if [ $1 == '0' ]
 then
-        echo WM_0 base surface
-        cd ./surfaces
-        for file in WM_0_surfaces/*left*
+
+        for file in ./surfaces/WM_0_surfaces/*left*
         do
-                average_surfaces GM_"$new_fraction"_surfaces/$(basename $file _WM_0_surface_left.obj)_GM_"$new_fraction"_surface_left.obj none none 1 $file GM_"$old_fraction"_surfaces/$(basename $file _WM_0_surface_left.obj)_GM_"$old_fraction"_surface_left.obj	
-        done
-        for file in WM_0_surfaces/*right*
+                echo average_surfaces ./surfaces/GM_"$new_fraction"_surfaces/$(basename $file _WM_0_surface_left.obj)_GM_"$new_fraction"_surface_left.obj none none 1 $file ./surfaces/GM_"$old_fraction"_surfaces/$(basename $file _WM_0_surface_left.obj)_GM_"$old_fraction"_surface_left.obj	
+        done > joblist_GM_"$new_fraction"
+        for file in ./surfaces/WM_0_surfaces/*right*
         do
-                average_surfaces GM_"$new_fraction"_surfaces/$(basename $file _WM_0_surface_right.obj)_GM_"$new_fraction"_surface_right.obj none none 1 $file GM_"$old_fraction"_surfaces/$(basename $file _WM_0_surface_right.obj)_GM_"$old_fraction"_surface_right.obj
-        done
+                echo average_surfaces ./surfaces/GM_"$new_fraction"_surfaces/$(basename $file _WM_0_surface_right.obj)_GM_"$new_fraction"_surface_right.obj none none 1 $file ./surfaces/GM_"$old_fraction"_surfaces/$(basename $file _WM_0_surface_right.obj)_GM_"$old_fraction"_surface_right.obj
+        done >> joblist_GM_"$new_fraction"
 
 elif [ $1 == '12_5' ]
 then
-        echo GM_12_5 base surface
-        cd ./surfaces
-        for file in GM_12_5_surfaces/*left*
+        for file in ./surfaces/GM_12_5_surfaces/*left*
         do
-                average_surfaces GM_"$new_fraction"_surfaces/$(basename $file _GM_12_5_surface_left.obj)_GM_"$new_fraction"_surface_left.obj none none 1 $file GM_"$old_fraction"_surfaces/$(basename $file _GM_12_5_surface_left.obj)_GM_"$old_fraction"_surface_left.obj	
-        done
-        for file in GM_12_5_surfaces/*right*
+                echo average_surfaces ./surfaces/GM_"$new_fraction"_surfaces/$(basename $file _GM_12_5_surface_left.obj)_GM_"$new_fraction"_surface_left.obj none none 1 $file ./surfaces/GM_"$old_fraction"_surfaces/$(basename $file _GM_12_5_surface_left.obj)_GM_"$old_fraction"_surface_left.obj	
+        done > joblist_GM_"$new_fraction"
+        for file in ./surfaces/GM_12_5_surfaces/*right*
         do
-                average_surfaces GM_"$new_fraction"_surfaces/$(basename $file _GM_12_5_surface_right.obj)_GM_"$new_fraction"_surface_right.obj none none 1 $file GM_"$old_fraction"_surfaces/$(basename $file _GM_12_5_surface_right.obj)_GM_"$old_fraction"_surface_right.obj
-        done
+                echo average_surfaces ./surfaces/GM_"$new_fraction"_surfaces/$(basename $file _GM_12_5_surface_right.obj)_GM_"$new_fraction"_surface_right.obj none none 1 $file ./surfaces/GM_"$old_fraction"_surfaces/$(basename $file _GM_12_5_surface_right.obj)_GM_"$old_fraction"_surface_right.obj
+        done >> joblist_GM_"$new_fraction"
 fi
