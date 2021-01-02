@@ -13,6 +13,7 @@ The proof-of-concept paper, written by Emily Olafson and others, is currently in
 - RMINC (https://github.com/Mouse-Imaging-Centre/RMINC)
 - the R module mni.cortical.statistics (https://github.com/BIC-MNI/mni.cortical.statistics)
 - qbatch (https://github.com/pipitone/qbatch) but any tool for executing commands in parallel can be substituted (with modifications to run.sh)
+- Anaconda 2.3
 
 ## Procedure (specific to CIC users)
  
