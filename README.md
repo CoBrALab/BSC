@@ -6,14 +6,14 @@ The proof-of-concept paper, written by Emily Olafson and others, is currently in
 
 ## Dependencies
 - minc-tool-kit 1.9.16(http://bic-mni.github.io/#v2-version-1918)
-- CIVET 1.1.12 (https://www.bic.mni.mcgill.ca/ServicesSoftware/CIVET)
+- CIVET 2.1.0 (https://www.bic.mni.mcgill.ca/ServicesSoftware/CIVET)
 - R 3.4.0
 - Rstudio
 - R-extras 3.4.0
 - RMINC (https://github.com/Mouse-Imaging-Centre/RMINC)
 - the R module mni.cortical.statistics (https://github.com/BIC-MNI/mni.cortical.statistics)
 - qbatch (https://github.com/pipitone/qbatch) but any tool for executing commands in parallel can be substituted (with modifications to run.sh)
-- Anaconda 2.3
+- Anaconda 5.1.0
 
 ## Procedure (specific to CIC users)
  
